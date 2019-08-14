@@ -1,0 +1,27 @@
+{
+  "name": "@ctsy/cache",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepublish": "rm -rf dist && tsc"
+  },
+  "repository": "https://github.com/c-tsy/cache",
+  "author": "castleiMac <castle@tansuyun.cn>",
+  "license": "MIT",
+  "dependencies": {
+    "@ctsy/hook": "^0.0.5",
+    "mz": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/mz": "^0.0.32",
+    "@types/node": "^12.7.1"
+  }
+}
