@@ -9,15 +9,18 @@ export default class Driver {
      */
     async get(key: string, defaultValue: any = undefined) {
         let r = cached[key] || defaultValue;
-        if (r && r._e > 0) {
-            if (r._e < Date.now()) {
-                return r.v;
-            } else {
-                await this.del(key);
-                return defaultValue;
+        if (r) {
+            if (r._e > 0) {
+                if (r._e < Date.now()) {
+                    return r.v;
+                } else {
+                    await this.del(key);
+                    return defaultValue;
+                }
             }
+            return r.v;
         }
-        return r.v;
+        return defaultValue;
     }
     /**
      * 设置值
