@@ -1,8 +1,7 @@
 import Driver from './driver';
 import File from './drivers/file';
 import { resolve } from 'path';
-import hook from '@ctsy/hook';
-import { HookWhen } from '../../../castle-hook/src/hook';
+import hook, { HookWhen } from '@ctsy/hook';
 
 export enum CacheError {
     DriverNotFound = "DriverNotFound"
